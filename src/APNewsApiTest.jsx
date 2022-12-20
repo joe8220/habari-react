@@ -2,8 +2,9 @@ import { useEffect } from "react"
 
 const APNewsApiTest = () => {
     useEffect(() => {
-        
+
     },[])
+    
     return (
         <div>
 
