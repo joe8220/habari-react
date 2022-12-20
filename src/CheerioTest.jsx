@@ -17,8 +17,6 @@ const CheerioTest = () => {
         // 10개 미만의 뉴스 기사
         for (let i = 0; i < Math.min(headlines.length, 10); i++) {
             const title = getTitle(headlines.get(i));
-            console.log(headlines.get(i).next.children);
-
             const details = getDetailsUrl(headlines.get(i));
             // 가끔 details가 안 나오는 경우 있음 -> 깔끔히 무시
             if(!details) continue;
@@ -52,7 +50,11 @@ const CheerioTest = () => {
     }
 
     const getTitle = (headline) => {
-        return headline.children[0].children[0].children[0].data;
+        try {
+            return headline.children[0].children[0].children[0].data;
+        } catch (error) {
+            return ''
+        }
     }
     const getDetailsUrl = (headline) => {
         return headline.children[0].attribs.href

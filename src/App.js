@@ -5,8 +5,8 @@ import APNewsApiTest from "./APNewsApiTest"
 function App() {
   return (
     <div className="App">
-     {/* <CheerioTest /> */}
-     <APNewsApiTest />
+     <CheerioTest />
+     {/* <APNewsApiTest /> */}
     </div>
   );
 }
